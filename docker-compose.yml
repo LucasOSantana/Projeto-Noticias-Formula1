@@ -1,0 +1,34 @@
+version: "3"
+services:
+    laravel:
+        build: .
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - .:/var/www/html
+        restart: always
+        depends_on:
+            - mysql
+        networks:
+            - projeto_formula
+        env_file:
+            - .env
+
+    mysql:
+        image: mysql:latest
+        ports:
+            - "3306:3306"
+        restart: always
+        volumes:
+            - mysql_data:/var/lib/mysql
+        networks:
+            - projeto_formula
+
+networks:
+    projeto_formula:
+        driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local

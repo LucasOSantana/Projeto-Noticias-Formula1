@@ -1,0 +1,76 @@
+@font-face {
+    font-family: 'formulaRegular';
+    src: url('../fonts/Formula1-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'formulaBold';
+    src: url('../fonts/Formula1-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'formulaWide';
+    src: url('../fonts/Formula1-Wide.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'formulaBlack';
+    src: url('../fonts/Formula1-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'simploMedium';
+    src: url('../fonts/Simplo-Medium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'simploRegular';
+    src: url('../fonts/Simplo-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'simploBlack';
+    src: url('../fonts/Simplo-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'marcherItalic';
+    src: url('../fonts/Marcher-BlackItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    font-family: 'simploRegular';
+    
+}
+
+h1{
+    font-family: 'marcherItalic';
+}
+
+.team-title{
+    font-family: 'marcherItalic';
+    font-size: 4.5rem;
+    margin-bottom: -1rem;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

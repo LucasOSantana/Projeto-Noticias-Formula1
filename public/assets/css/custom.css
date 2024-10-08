@@ -1,0 +1,110 @@
+.bg-black{
+    background-color: #1B1D23;
+}
+
+.bg-white{
+    background-color: #F2F4F3;
+}
+
+.bg-green{
+    background-color: #2BB9A9;
+}
+
+.bg-red{
+    background-color: #D62246;
+}
+
+.bg-silver{
+    background-color: #C8CCCE;
+}
+
+.color-red{
+    color: #D62246;
+}
+
+.color-silver{
+    color: #C8CCCE;
+}
+
+.color-white{
+    color: #F2F4F3 !important;
+}
+
+.title-dashboard{
+    margin-top: 17%;
+    margin-left: 15%;
+}
+
+.bg-dashboard{
+    margin:0;
+    height:100vh;
+    background: 
+    radial-gradient(circle closest-corner at 50% 45%, transparent 35%, #1B1D23 75%), 
+    url('../img/Dashboard-wpp.jpg') center/cover;
+}
+
+.logo-f1{
+    background-image: url('../img/logo.png');
+    width: 120px;
+    height: 60px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+.team-nickname{
+    margin-top: 5rem;
+}
+
+.team-nickname-bt{
+    margin-top: 19rem;
+}
+
+.team-text{
+    position: relative; 
+    top: 40%; 
+    left: 10%; 
+}
+
+.row {
+    position: relative; /* Para permitir que os elementos filhos sejam posicionados em relação a este */
+}
+
+.central-image {
+    position: absolute; 
+    top: 35%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+
+    max-width: 100%;
+    height: 450px; 
+}
+
+.central-image-2 {
+    position: absolute; 
+    top: 40%; 
+    left: 45%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+
+    max-width: 100%;
+    height: 450px; 
+}
