@@ -7,7 +7,7 @@
 
   <!-- Stylesheet -->
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Data Table -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/sc-2.0.3/sb-1.0.0/sp-1.2.1/datatables.min.css" />
@@ -23,49 +23,60 @@
 </head>
 
 <body>
+<!--Main Navigation-->
+<header>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#"><img src="/assets/img/logo.png"></a>
 
-  <!-- Navbar Area Start -->
-  <header>
-    <nav class="navbar bg-black navbar-expand-lg navbar-dark" style="margin: 0; padding: 0;">
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
 
-      <div class="row col-12" style="margin: 0; padding: 0;">
-        <div id="leftSideNav" class="col-sm-6 ml-0">
-          <a class="navbar-brand logo-f1" href="#"></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        <div class="col-sm-6">
-            <div class="mt-2 collapse  navbar-collapse justify-content-end" id="navbarNav">
-          
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <a class="nav-link color-white" href="login"><i class="far fa-star"></i> Pilotos </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link color-white" href="new_user"><i class="fas fa-flag-checkered"></i> Equipes</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link color-white" href="new_user"><i class="fas fa-trophy"></i> Campeonatos</a>
-                
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link color-white" href="new_user"><i class="fas fa-trophy"></i> Recordes</a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{url('dashboard')}}"><i class="far fa-id-badge"></i></i> Profile</a>
-                    <a class="dropdown-item" href="{{url('contactm')}}"><i class="fas fa-envelope-open-text"></i> Messages</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{url('logout')}}"><i class="fas fa-sign-out-alt"></i> Logout</a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-        </div>
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Left links -->
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Equipes</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Campeonatos</a>
+          </li>
+
+     
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+              >Circuitos</a
+            >
+          </li>
+        </ul>
+        <!-- Left links -->
       </div>
-    </nav>
-  </header>
-  <!-- Navbar Area End -->
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
 
+  <!-- Background image -->
+</header>
 
   @yield('content')
   <!--for adding your content-->

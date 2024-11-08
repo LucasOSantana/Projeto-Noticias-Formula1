@@ -1,7 +1,6 @@
 @extends('layouts.navbar')
 @section('content') 
 
-
 <div id="carouselExample" class="carousel slide" data-interval="false" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
