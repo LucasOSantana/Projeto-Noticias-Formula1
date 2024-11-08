@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/equipes', function () {
-    return view('teams/teams');
+    return view('teams/teste');
 });

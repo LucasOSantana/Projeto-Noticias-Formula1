@@ -2,10 +2,6 @@
     background-color: #1B1D23;
 }
 
-.bg-white{
-    background-color: #F2F4F3;
-}
-
 .bg-green{
     background-color: #2BB9A9;
 }
@@ -28,6 +24,14 @@
 
 .color-white{
     color: #F2F4F3 !important;
+}
+
+.color-black{
+    color: black !important;
+}
+
+.header-size{
+    min-height: 10vh;
 }
 
 .title-dashboard{
@@ -108,3 +112,152 @@
     max-width: 100%;
     height: 450px; 
 }
+
+.background-all{
+    background: rgb(255,190,0);
+    background: linear-gradient(90deg, rgba(255,190,0,1) 42%, rgba(9,57,121,1) 77%); 
+    height: 90vh;
+}
+
+  .navbar-custom {
+    margin: 20px auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    width: 90%;
+  }
+
+  .navbar-custom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-custom .navbar-nav {
+    margin-right: auto;
+    max-width: 40%;
+  }
+  
+  .navbar-custom .navbar-brand {
+    margin-right: 2rem;
+  }
+
+  .navbar-custom .navbar-brand img{
+    max-width: 50%;
+    height: auto;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+  }
+  
+  .content::before,
+  .content::after {
+    content: "";
+    position: absolute;
+    background-color: #cc0822; 
+    width: 90vw; 
+    height: 90vh;
+    z-index: 0;
+  }
+  
+  .content::before {
+    bottom: -40%; /* Ajustar a posição do triângulo superior */
+    left: -40%; /* Ajustar a posição do triângulo superior */
+    transform: rotate(35deg);
+  }
+  
+  .content::after {
+    top: -40%; /* Ajustar a posição do triângulo inferior */
+    right: -40%; /* Ajustar a posição do triângulo inferior */
+    transform: rotate(35deg);
+  }
+  
+  .title-content {
+    position: relative;
+    z-index: 1;
+    top: -20%;
+    left: -20%;
+  }
+  
+  .title-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333; /* Cor de texto mais escura */
+  }
+  
+  .title-content h1 span {
+    color: #cc0822; /* Cor de texto mais escura para "RS16" */
+  }
+  
+  .title-content h2 {
+    font-size: 1.5rem;
+    top: -10%;
+    font-weight: lighter;
+    color: #333; /* Cor de texto mais escura */
+  }
+
+  .text-content {
+    position: relative;
+    z-index: 1;
+    top: 20%;
+    left: 25%;
+  }
+
+  .text-content h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: #333; /* Cor de texto mais escura */
+  }
+  
+  .car-image {
+    position: absolute;
+    z-index: 1;
+    max-width: 80%;
+    height: auto;
+    top: 65%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .car-image img {
+    max-width: 120%;
+    height: auto;
+    -webkit-filter: drop-shadow(15px 15px 15px #222);
+    filter: drop-shadow(15px 15px 15px #222);
+  }
+  
+  @media (max-width: 768px) {
+    .text-content h1 {
+      font-size: 2rem;
+    }
+  
+    .text-content h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  .navbar-custom .navbar-nav .nav-link {
+    position: relative;
+  }
+  
+  .navbar-custom .navbar-nav .nav-link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 75%;
+    width: 100%;
+    height: 2px; /* Ajuste a altura da barra conforme necessário */
+    background-color: #cc0822; /* Cor da barra */
+  }
