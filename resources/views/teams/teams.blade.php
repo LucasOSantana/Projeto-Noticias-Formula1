@@ -1,48 +1,43 @@
 @extends('layouts.navbar')
 @section('content') 
 
-<div id="carouselExample" class="carousel slide" data-interval="false" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <div class="row">
-                <div class="col-6 bg-red vh-100">
-                </div>
-                <div class="col-6 bg-black">
-                    <div class="team-nickname">
-                        <h1 class="color-red team-title">THE RED</h1>
-                        <h1 class="color-red team-title">DEVIL</h1>
+
+<main class="contentTeams mt-3">
+    
+    <div class="row justify-content-center mt-5" style="width: 90%">
+        @foreach(range(1, 5) as $index)
+            <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                <div class=" card-team card shadow" onclick="alterarPagina()">
+                    <div class="bars-container"></div>
+                    <div class="card-team-car-div">
+                        <img class="card-team-car align-center" src="/assets/img/mercedes-front.png" alt="team">  
                     </div>
+                    <p class="card-team-name text-center">MERCEDES</p>
+                    <p class="card-team-extra-text">The Silver Arrows</p>
+                    <img class="card-team-logo" src="/assets/img/mercedes-logo.png" alt="team">  
+                  
                 </div>
-                <img src="/assets/img/ferrari.png" alt="Descrição da Imagem" class="central-image">
             </div>
-        </div>
-        <div class="carousel-item">
-            <div class="row">
-                <div class="col-6 bg-silver vh-100"> <!-- Cor de fundo alterada -->
-             
-                </div>
-                <div class="col-6 bg-black">
-                    <div class="team-nickname-bt">
-                        <h1 class="color-silver team-title ml-5 pl-5">THE SILVER</h1>
-                        <h1 class="color-silver team-title">ARROWS</h1>
-                    </div>
-                </div>
-                <img src="/assets/img/mercedes.png" alt="Descrição da Imagem" class="central-image-2">
-            </div>
-        </div>
-        <!-- Adicione mais itens conforme necessário -->
+        @endforeach
     </div>
-    <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
 
-
+    <div class="row justify-content-center mt-4" style="width: 90%">
+        @foreach(range(6, 10) as $index)
+        <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                <div class=" card-team card shadow" onclick="alterarPagina()">
+                    <div class="bars-container"></div>
+                    <div class="card-team-car-div">
+                        <img class="card-team-car align-center" src="/assets/img/redbull-front.png" alt="team">  
+                    </div>
+                    <p class="card-team-name text-center">RED BULL</p>
+                    <p class="card-team-extra-text">The Bulls</p>
+                    <img class="card-team-logo" src="/assets/img/redbull-logo.png" alt="team">  
+                  
+                </div>
+            </div>
+        @endforeach
+    </div>
+</main>
     
 
 @endsection 
