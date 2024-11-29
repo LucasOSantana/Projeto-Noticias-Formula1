@@ -1,7 +1,9 @@
 @extends('layouts.navbar')
 @section('content') 
 
-<main class="content">
+<main class="test">
+
+<div class="content">
     <div class="title-content">
       <h1><span>FERRARI</span></h1>
       <b><h2>THE RED DEVIL</h2></b>
@@ -14,7 +16,9 @@
         <h2>A maior vencedora da história da fórmula 1</h2>
 
     </div>
-  </main>
+</div>
+
+</main>
 
 
 @endsection 
