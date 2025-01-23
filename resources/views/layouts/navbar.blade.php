@@ -50,14 +50,14 @@
         <!-- Left links -->
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="dashboard">Home</a>
+            <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Equipes</a>
+            <a class="nav-link active" aria-current="page" href="/equipes">Equipes</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Campeonatos</a>
+            <a class="nav-link" href="/campeonatos">Campeonatos</a>
           </li>
 
      
@@ -93,6 +93,7 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/sc-2.0.3/sb-1.0.0/sp-1.2.1/datatables.min.js"></script>
+  <script src="{{ asset('assets/js/layouts/navbar.js') }}"></script>
   <!--add this to have this scripts on all pages-->
   @yield('scripts')
   <!--for adding additional scripts-->
