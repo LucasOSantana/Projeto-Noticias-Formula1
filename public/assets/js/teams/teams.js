@@ -29,16 +29,16 @@ const barConfig = [
 
 // Cores específicas para cada card
 const colorConfigs = [
+    ['black', '#2173B8', '#fd4bc7'],
+    ['black', '#037A68', 'black'],
+    ['#FFF200', '#EF1A2D', 'black'],
+    ['#dbdbdb', '#E6002B', 'black'],
+    ['black', '#FF8000', 'black'],
     ['black', '#00A19B', 'black'],
-    ['black', '#00A19B', 'black'],
-    ['black', '#00A19B', 'black'],
-    ['black', '#00A19B', 'black'],
-    ['black', '#00A19B', 'black'],
+    ['black', '#223971', '#CC1E4A'],
     ['#CC1E4A', '#223971', 'black'],
-    ['#CC1E4A', '#223971', 'black'],
-    ['#CC1E4A', '#223971', 'black'],
-    ['#CC1E4A', '#223971', 'black'],
-    ['#CC1E4A', '#223971', 'black'],
+    ['black', '#52E252', 'black'],
+    ['#00A0DE', '#00A0DE', 'black'],
     
 ];
 
