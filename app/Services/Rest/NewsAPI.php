@@ -31,7 +31,7 @@ class NewsAPI
         $queryParams['language'] = 'pt';
         $queryParams['searchIn'] = 'title';
         $queryParams['q'] = '+"Formula 1" OR "Lewis Hamilton" OR "F1" OR "Max Verstappen" OR "Charles Leclerc" OR "Carlos Sainz" OR "George Russel" OR "Sérgio Perez" OR "Lando Norris" OR "Oscar Piastri" OR "Lian Lawson" OR "Yuki Tsunoda" OR "Gabriel Bortoleto" OR "Nico Hulkenberg" OR "Pierre Gasly" OR "Esteban Ocon" OR "Oliver Bearman" OR "Lance Stroll" OR "Fernando Alonso" OR "Isack Hadjar" OR "Kimi Antonelli" OR "Alex Albon" OR "Daniel Ricciardo" OR "Kevin Magnussen"';
-        $queryParams['excludeDomains'] = 'pplware.sapo.pt,olhardigital.com.br';
+        $queryParams['excludeDomains'] = 'pplware.sapo.pt,olhardigital.com.br,terra.com.br';
 
         $response = Http::withOptions(['verify' => false])->get($this->baseUrl .'everything', $queryParams);
 

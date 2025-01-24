@@ -7,14 +7,14 @@
     <div class="row justify-content-center mt-5" style="width: 90%">
         @foreach(range(0, 4) as $index)
             <div class="ml-5 col-12 col-sm-4 col-md-3 col-lg-2">
-                <div class=" card-team card shadow" onclick="alterarPagina()">
+                <div class=" card-team card shadow" onclick="alterarPagina('{{$teams[$index]['constructorId']}}')">
                     <div class="bars-container"></div>
                     <div class="card-team-car-div">
                         <img class="card-team-car align-center" src="/assets/img/{{$teams[$index]['name']}}-front.png" alt="team">  
                     </div>
                     
                     <p class="card-team-name text-center">{{$teams[$index]['name']}}</p>
-                    <p class="card-team-extra-text">The Silver Arrows</p>
+                    <p class="card-team-extra-text">{{$teams[$index]['nickname']}}</p>
                     <img class="card-team-logo" src="/assets/img/{{$teams[$index]['name']}}-logo.png" alt="team">  
                   
                 </div>
@@ -25,13 +25,13 @@
     <div class="row justify-content-center mt-4" style="width: 90%">
         @foreach(range(5, 9) as $index)
         <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                <div class=" card-team card shadow" onclick="alterarPagina()">
+                <div class=" card-team card shadow" onclick="alterarPagina('{{$teams[$index]['constructorId']}}')">
                     <div class="bars-container"></div>
                     <div class="card-team-car-div">
                         <img class="card-team-car align-center" src="/assets/img/{{$teams[$index]['name']}}-front.png" alt="team">  
                     </div>
                     <p class="card-team-name text-center">{{$teams[$index]['name']}}</p>
-                    <p class="card-team-extra-text">The Bulls</p>
+                    <p class="card-team-extra-text">{{$teams[$index]['nickname']}}</p>
                     <img class="card-team-logo" src="/assets/img/{{$teams[$index]['name']}}-logo.png" alt="team">  
                   
                 </div>

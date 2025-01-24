@@ -11,7 +11,8 @@
 
   <!-- Data Table -->
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/sc-2.0.3/sb-1.0.0/sp-1.2.1/datatables.min.css" />
-
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  
   <!-- Font awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <!--add this to have this styles on all pages-->
@@ -20,12 +21,14 @@
   <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}" />
   <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}" />
   <!--for adding additional styles-->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 
 <body>
 <!--Main Navigation-->
 <header>
   <!-- Navbar -->
+
   <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
     <!-- Container wrapper -->
     <div class="container">
@@ -53,7 +56,11 @@
             <a class="nav-link" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/equipes">Equipes</a>
+            <a class="nav-link " aria-current="page" href="/equipes">Equipes</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/pilotos">Pilotos</a>
           </li>
 
           <li class="nav-item">
@@ -62,7 +69,7 @@
 
      
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
+            <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
               >Circuitos</a
             >
           </li>
@@ -94,6 +101,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/sc-2.0.3/sb-1.0.0/sp-1.2.1/datatables.min.js"></script>
   <script src="{{ asset('assets/js/layouts/navbar.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <!--add this to have this scripts on all pages-->
   @yield('scripts')
   <!--for adding additional scripts-->

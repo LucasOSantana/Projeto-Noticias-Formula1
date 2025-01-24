@@ -1,3 +1,7 @@
+:root {
+  --triangle-color: white; /* Cor padrão dos triângulos */
+}
+
 .bg-black{
     background-color: #1B1D23;
 }
@@ -74,7 +78,7 @@
 }
 
 .dashboard-font-text{
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-family: 'formulaRegular', sans-serif;
   line-height: 130%;
 }
@@ -226,6 +230,17 @@
     background-color: white;
   }
 
+  .contentDrivers{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: white;
+  }
+
+
   .news-card{
     min-width: 15%;
     min-height: 40vh;
@@ -340,6 +355,34 @@
 
   }
 
+  .season-background{
+    position: relative;
+    background-color: white;
+    justify-content: center;
+    height: 150vh;
+    display: flex;
+  }
+
+  .season-filter{
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-filter{
+    align-content: end;
+  }
+
+  .card-filter-season{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: none;
+  }
+
   .card-team-car{
     position: absolute;
     width: 90%;
@@ -365,12 +408,14 @@
   }
 
 
-  .test{
-    height: 200vh;
+  .team-background{
+    height: 190vh;
     background-color: white;
   }
 
-  .content {
+
+
+  .team-title {
     position: relative;
     display: flex;
     align-items: center;
@@ -380,37 +425,75 @@
     background-color: white;
   }
 
-  .content::before{
+  .team-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: white;
+  }
+
+  .team-title .top-left {
     content: "";
     position: absolute;
-    background-color: #cc0822;
+    background-color: var(--triangle-color);
     width: 100vw;
     height: 100vh;
     z-index: 0;
     animation: slide-bot 1.5s ease-out forwards; /* Animação */
+    transform: translate(-150%, 150%) rotate(35deg); 
+    animation-delay: 0s;
 
   }
 
-  .content::after {
+  .team-title .top-right  {
     content: "";
     position: absolute;
-    background-color: #cc0822;
+    background-color: var(--triangle-color);
     width: 100vw;
     height: 100vh;
     z-index: 0;
     animation: slide-top 1.5s ease-out forwards; /* Animação */
-  }
-
-  /* Triângulo inferior */
-  .content::before {
-    transform: translate(-150%, 150%) rotate(35deg); 
-    animation-delay: 0s;
-  }
-
-  /* Triângulo superior */
-  .content::after {
     transform: translate(150%, -100%) rotate(35deg);
     animation-delay: 0s;
+  }
+
+  .team-content .bot-left {
+    content: "";
+    position: absolute;
+    background-color: var(--triangle-color);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    animation: slide-bellow-top 1.5s ease-out forwards;
+    transform: translate(-190%, 0%) rotate(87deg);
+    animation-delay: 0s;
+}
+
+  .team-content .bot-right {
+    content: "";
+    position: absolute;
+    background-color: var(--triangle-color);
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    animation: slide-bellow-bot 1.5s ease-out forwards;
+    transform: translate(160%, 100%) rotate(135deg);
+    animation-delay: 0s;
+}
+
+  @keyframes slide-bellow-bot {
+      to {
+          transform: translate(70%, 30%) rotate(135deg);
+      }
+  }
+
+  @keyframes slide-bellow-top {
+    to {
+        transform: translate(-58.5%, -30%) rotate(140deg);
+    }
   }
 
   @keyframes slide-bot {
@@ -481,18 +564,51 @@
   .title-content h1 {
     font-size: 3rem;
     font-weight: bold;
-    color: #333; /* Cor de texto mais escura */
+    color: #333; 
   }
   
   .title-content h1 span {
-    color: #cc0822; /* Cor de texto mais escura para "RS16" */
+    color: var(--triangle-color); 
   }
   
   .title-content h2 {
     font-size: 1.5rem;
     top: -10%;
     font-weight: lighter;
-    color: #333; /* Cor de texto mais escura */
+    color: #333;
+  }
+
+  .team-circuit{
+    position: absolute;
+    left: 55%;
+    top: 40%;
+  }
+
+  .team-circuit img{
+    max-width: 90%;
+  }
+
+  .team-circuit-show{
+    position: absolute;
+    left: 55%;
+    top: 30%;
+
+  }
+  
+  .team-summary{
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    width: 40%;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .team-summary h3{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
   }
 
   .text-content {
@@ -500,12 +616,16 @@
     z-index: 1;
     top: 20%;
     left: 25%;
+    width: 30%;
   }
 
   .text-content h2 {
     font-size: 1.5rem;
     font-weight: lighter;
     color: #333; /* Cor de texto mais escura */
+    word-wrap: break-word; /* Allows long words to break */
+    overflow-wrap: break-word; /* Modern approach to word breaking */
+    white-space: normal;
   }
   
   .car-image {
@@ -519,14 +639,21 @@
   }
   
   .car-image img {
-    max-width: 120%;
+    max-width: 60vw;
     height: auto;
     -webkit-filter: drop-shadow(10px 10px 10px #222);
     filter: drop-shadow(10px 10px 10px #222);
   }
 
-  
-  
+  .drivers-background{
+    position: relative;
+    width: 60%;
+  }
+
+  .drivers-card{
+    max-height: 100%;
+  }
+
   @media (max-width: 768px) {
     .text-content h1 {
       font-size: 2rem;

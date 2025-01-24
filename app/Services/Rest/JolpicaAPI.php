@@ -15,7 +15,7 @@ class JolpicaAPI
     }
 
     /**
-     * Realiza uma requisição GET na API.
+     * Realiza uma requisição GET para trazer equipes.
      *
      * @param string $endpoint
      * @param array $queryParams
@@ -32,4 +32,65 @@ class JolpicaAPI
 
         return null;
     }
+
+    /**
+     * Realiza uma requisição GET para trazer pilotos.
+     *
+     * @param string $endpoint
+     * @param array $queryParams
+     * @return array|null
+     */
+    public function getDrivers($year)
+    {
+        
+        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . '/drivers.json');
+
+        if ($response->successful()) {
+            return $response->json();
+        }
+
+        return null;
+    }
+
+    /**
+     * Realiza uma requisição GET para trazer as temporadas.
+     *
+     * @param string $endpoint
+     * @param array $queryParams
+     * @return array|null
+     */
+    public function getSeasons($year)
+    {
+        
+        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . '/driverstandings.json');
+
+        if ($response->successful()) {
+            return $response->json();
+        }
+
+        return null;
+    }
+
+     /**
+     * Realiza uma requisição GET para trazer as corridas.
+     *
+     * @param string $endpoint
+     * @param array $queryParams
+     * @return array|null
+     */
+    public function getCircuits($year)
+    {
+        
+        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . '/circuits.json');
+
+        if ($response->successful()) {
+            return $response->json();
+        }
+
+        return null;
+    }
+
+
+
+    
 }

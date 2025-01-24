@@ -61,6 +61,6 @@ barsContainers.forEach((barsContainer, index) => {
     });
 });
 
-function alterarPagina(){
-    window.location.href = '/equipes/1';
+function alterarPagina(id){
+    window.location.href = '/equipes/'+ id;
 }
