@@ -66,7 +66,6 @@
           <li class="nav-item">
             <a class="nav-link" href="/campeonatos">Campeonatos</a>
           </li>
-
      
           <li class="nav-item">
             <a class="nav-link disabled" tabindex="-1" aria-disabled="true"
@@ -102,6 +101,7 @@
   <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/r-2.2.6/sc-2.0.3/sb-1.0.0/sp-1.2.1/datatables.min.js"></script>
   <script src="{{ asset('assets/js/layouts/navbar.js') }}"></script>
   <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <!--add this to have this scripts on all pages-->
   @yield('scripts')
   <!--for adding additional scripts-->

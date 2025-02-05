@@ -9,7 +9,8 @@
         <div class="col-4 pe-2">
             <label for="year">Ano: </label>
             <select id="year" class="select2 col-12" onchange="loadRaces(this.value)">
-                @foreach(range(1970, 2024) as $index)
+                <option selected value="">- Selecione um ano -</option>
+                @foreach(range(2024, 1970) as $index)
                     <option value="{{$index}}">{{$index}}</option>
                 @endforeach
             </select>
@@ -22,15 +23,15 @@
         </div>
 
         <div class="col-4 text-end">
-            <button class="mt-4 btn btn-success" onclick="loadData()">Carregar dados</button>
+            <button class="mt-4 btn btn-danger" onclick="loadData()">Carregar dados</button>
             
         </div>
     </div>
 </div>
 
 </div>
-<div class="season-content">
-</div>
+
+<div class="card data-container"></div>
 
 </main>
 

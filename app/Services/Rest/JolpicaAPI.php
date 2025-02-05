@@ -59,10 +59,14 @@ class JolpicaAPI
      * @param array $queryParams
      * @return array|null
      */
-    public function getSeasons($year)
+    public function getSeasons($year, $round)
     {
         
-        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . '/driverstandings.json');
+        if($round){
+            $seasonRound = '/'.$round;
+        }
+
+        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . $seasonRound . '/driverstandings.json');
 
         if ($response->successful()) {
             return $response->json();
@@ -81,7 +85,7 @@ class JolpicaAPI
     public function getCircuits($year)
     {
         
-        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . '/circuits.json');
+        $response = Http::withOptions(['verify' => false])->get($this->baseUrl . $year . '/races.json');
 
         if ($response->successful()) {
             return $response->json();

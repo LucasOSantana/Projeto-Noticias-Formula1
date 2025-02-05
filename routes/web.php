@@ -17,4 +17,6 @@ Route::get('/campeonatos', [SeasonsController::class, 'index']);
 
 Route::post('/seasons/filter', [SeasonsController::class, 'filter']);
 
+Route::post('/seasons/getdata', [SeasonsController::class, 'getdata']);
+
 

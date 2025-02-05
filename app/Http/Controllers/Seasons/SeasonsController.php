@@ -28,10 +28,23 @@ class SeasonsController
         
         $circuits = $this->jolpicaAPI->getCircuits($year);
 
-        $circuits = $circuits['MRData']['CircuitTable']['Circuits'];
+        $circuits = $circuits['MRData']['RaceTable']['Races'];
 
         return response()->json([
             $circuits
+        ]);
+    }
+
+    public function getdata(Request $request){
+
+        $year = $request->input('year'); 
+        $race = $request->input('race'); 
+        
+        $season = $this->jolpicaAPI->getSeasons($year, $race);
+        $season = $season['MRData']['StandingsTable']['StandingsLists'][0]['DriverStandings'];
+        
+        return response()->json([
+            $season
         ]);
     }
 
